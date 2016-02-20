@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <script src = jquery/jquery.js></script>
+    <script src = jquery-ui/jquery-ui.min.js></script>
+    <link rel=stylesheet type=text/css
+    href=jquery-ui/jquery-ui.css />
+
+    <style type=text/css>
+        #dialog {
+            display: none;
+        }
+        div.ui-dialog-titlebar {
+            font-size : 20px;
+            background: #088936;
+            border-color: #088936;
+            font-weight: bold;
+        }
+
+        div.ui-dialog-content {
+            font-size : 15px;
+            font-family : georgia;
+        }
+
+        div.ui-widget-content {
+            font-size : 15px;
+            font-family : Verdana, Geneva, sans-serif;
+            background: #E5E5E5;
+        }
+
+
+    </style>
+
+
+    <div id="dialog" >
+        <p> Content of the dialog box </p>
+    </div>
+    <input id="open" type=button value=Open>
+
+    <script>
+        $("#open").click(function(event){
+            $("#dialog").dialog({
+                width: '37%',
+                title: 'Editar',
+                show: 'scale',
+                hide: 'puff'
+            });
+        });
+        
+    </script>
